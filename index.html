@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Narges Nourish — Nourish naturally, every day</title>
+<meta name="description" content="Wholesome bowls, daffodil-fresh and chef-built, delivered daily across Doha. Eat well, feel better with Narges Nourish.">
+<meta name="theme-color" content="#16302A">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Narges Nourish — Nourish naturally, every day">
+<meta property="og:description" content="Wholesome bowls, daffodil-fresh and chef-built, delivered daily across Doha.">
+<meta property="og:url" content="https://nargesnourish.com/">
+<meta property="og:image" content="https://nargesnourish.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FAF7EF; --paper:#FFFFFF; --ink:#2E7D44; --green:#4CA55A; --sprout:#6FBF73;
+  --yellow:#F7B733; --amber:#EF8E2C; --soft:#FFD66B; --deep:#16302A; --deep2:#0F241F;
+  --line:#E7E1D3; --muted:#6f8a78; --text:#33503f;
+  --maxw:1180px; --r:22px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Quicksand',system-ui,sans-serif; background:var(--cream); color:var(--text);
+  font-weight:400; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--green)}
+h1,h2,h3{color:var(--ink);font-weight:700;line-height:1.08;letter-spacing:-.5px}
+section{position:relative}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;letter-spacing:.2px;
+  padding:14px 26px;border-radius:40px;border:2px solid transparent;cursor:pointer;transition:.25s var(--ease);white-space:nowrap}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{background:var(--deep);transform:translateY(-2px)}
+.btn-amber{background:var(--yellow);color:var(--deep)}
+.btn-amber:hover{background:var(--amber);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-light{background:#fff;color:var(--ink)}
+.btn-light:hover{transform:translateY(-2px)}
+
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:60;transition:.3s var(--ease)}
+header .bar{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--maxw);margin:0 auto}
+header.scrolled{background:rgba(250,247,239,.86);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:21px;color:var(--ink);letter-spacing:-.4px}
+.brand .logo{width:38px;height:38px;flex:none}
+.brand b{font-weight:700} .brand span{font-weight:500;color:var(--green)}
+.nav{display:flex;align-items:center;gap:34px}
+.nav a.link{font-weight:500;font-size:15px;color:var(--ink);position:relative;padding:4px 0}
+.nav a.link::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--yellow);transition:.25s var(--ease)}
+.nav a.link:hover::after{width:100%}
+.menu-toggle{display:none;background:none;border:0;cursor:pointer;width:42px;height:42px;color:var(--ink)}
+.menu-toggle svg{width:26px;height:26px}
+
+/* ---------- hero ---------- */
+.hero{padding:150px 0 90px;overflow:hidden}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(40px,6.4vw,76px)}
+.hero h1 .accent{color:var(--green)}
+.hero p.lead{font-size:clamp(17px,2.2vw,21px);font-weight:300;color:var(--text);max-width:30ch;margin:22px 0 32px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .trust{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+.hero .trust div{font-size:13px;font-weight:500;color:var(--muted)}
+.hero .trust b{display:block;font-size:24px;font-weight:700;color:var(--ink);letter-spacing:-.5px}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);z-index:-1;opacity:.5}
+.b1{width:520px;height:520px;background:radial-gradient(circle at 30% 30%,#DDEFE0,transparent 70%);top:-80px;right:-120px}
+.b2{width:360px;height:360px;background:radial-gradient(circle at 50% 50%,#FBE7BE,transparent 70%);bottom:-60px;left:-100px;opacity:.45}
+/* hero visual */
+.hero-art{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1}
+.hero-art .ring{position:absolute;inset:6%;border-radius:50%;border:2px dashed rgba(111,191,115,.5)}
+.hero-art .disc{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle at 50% 40%,#fff,#F4EEDD);box-shadow:0 30px 70px -36px rgba(46,125,68,.55)}
+.hero-art .bowlmark{position:relative;width:62%;z-index:2;transform-origin:50% 70%}
+.hero-art .petal-dot{position:absolute;width:14px;height:14px;border-radius:50% 50% 50% 0;background:var(--yellow);transform:rotate(45deg)}
+.pd1{top:14%;left:20%;background:var(--soft)}.pd2{bottom:20%;right:16%;background:var(--green)}
+.pd3{top:24%;right:22%;background:var(--amber);width:10px;height:10px}
+
+/* bloom + sway animation */
+@keyframes bloom{0%{transform:translateY(26px) scale(.62);opacity:0}60%{opacity:1}100%{transform:translateY(0) scale(1);opacity:1}}
+@keyframes sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(45deg)}50%{transform:translateY(-12px) rotate(45deg)}}
+.hero-art .bowlmark{animation:bloom 1.1s var(--ease) both}
+.hero-art .swayer{animation:sway 6s ease-in-out infinite 1.1s}
+.hero-art .ring{animation:spin 80s linear infinite}
+.petal-dot{animation:floaty 5s ease-in-out infinite}
+.pd2{animation-delay:.6s}.pd3{animation-delay:1.2s}
+
+/* ---------- marquee ---------- */
+.marquee{background:var(--ink);color:#fff;padding:16px 0;overflow:hidden;white-space:nowrap}
+.marquee .track{display:inline-block;animation:scroll 28s linear infinite}
+.marquee span{font-weight:600;font-size:15px;letter-spacing:.16em;text-transform:uppercase;padding:0 26px;opacity:.92}
+.marquee .dot{color:var(--soft)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- section scaffolding ---------- */
+.band{padding:92px 0}
+.band .head{max-width:660px;margin-bottom:48px}
+.band h2{font-size:clamp(30px,4.4vw,46px);margin:12px 0}
+.band .head p{font-size:17px;font-weight:300;color:var(--text)}
+
+/* story */
+.story .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.story .art{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:48px;display:flex;align-items:center;justify-content:center;box-shadow:0 24px 60px -44px rgba(46,125,68,.5)}
+.story .art svg{width:72%}
+.story h2{font-size:clamp(28px,4vw,42px)}
+.story p{font-size:17px;font-weight:300;margin-top:18px;max-width:52ch}
+.story .pull{font-weight:600;color:var(--ink)}
+
+/* menu / bowls */
+.menu{background:linear-gradient(180deg,var(--cream),#F2ECDD)}
+.bowls{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.bowl{background:var(--paper);border:1px solid var(--line);border-radius:26px 26px 90px 90px/26px 26px 60px 60px;
+  padding:30px 26px 34px;transition:.3s var(--ease);position:relative;overflow:hidden}
+.bowl:hover{transform:translateY(-8px);box-shadow:0 30px 60px -40px rgba(46,125,68,.55);border-color:var(--sprout)}
+.bowl .ic{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+.bowl h3{font-size:20px;margin-bottom:8px}
+.bowl p{font-size:14.5px;font-weight:300;color:var(--text);min-height:66px}
+.bowl .price{margin-top:14px;font-weight:700;color:var(--ink);font-size:17px}
+.bowl .price small{font-weight:500;color:var(--muted);font-size:12px}
+
+/* process */
+.process .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;counter-reset:step}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:34px 30px;position:relative}
+.step .n{font-size:13px;font-weight:700;letter-spacing:.2em;color:var(--yellow)}
+.step h3{font-size:21px;margin:14px 0 10px}
+.step p{font-size:15px;font-weight:300}
+.step .tick{position:absolute;top:30px;right:30px;width:40px;height:40px;border-radius:50%;background:#EAF4EC;display:flex;align-items:center;justify-content:center;color:var(--green)}
+
+/* values band */
+.values{background:var(--deep);color:#fff;padding:84px 0;overflow:hidden}
+.values h2{color:#fff}
+.values .v{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:14px}
+.values .vcard{padding:6px 0}
+.values .vcard .vm{width:54px;height:54px;border-radius:16px;background:rgba(111,191,115,.18);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.values .vcard h3{color:#fff;font-size:22px;margin-bottom:8px}
+.values .vcard p{font-weight:300;color:#cfe6d6;font-size:15px}
+.values .silo{position:absolute;right:-60px;top:-40px;width:280px;opacity:.06}
+
+/* cta */
+.cta-band{padding:96px 0}
+.cta-card{background:linear-gradient(135deg,var(--green),var(--ink));border-radius:34px;padding:64px 56px;color:#fff;
+  display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.cta-card h2{color:#fff;font-size:clamp(28px,3.6vw,40px)}
+.cta-card p{font-weight:300;color:#eaf6ed;margin-top:12px;font-size:17px}
+.cta-card .silo{position:absolute;right:-30px;bottom:-50px;width:240px;opacity:.12}
+.signup{display:flex;gap:10px;flex-wrap:wrap}
+.signup input{flex:1;min-width:180px;border:0;border-radius:40px;padding:15px 20px;font-family:inherit;font-size:15px;color:var(--ink)}
+.signup input::placeholder{color:#9bb3a4}
+.muted-note{font-size:12.5px;color:#cfe6d6;margin-top:12px;font-weight:300}
+
+/* footer */
+footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.fbrand .brand{color:#fff} .fbrand .brand span{color:var(--sprout)}
+.fbrand p{font-weight:300;font-size:14.5px;margin-top:16px;max-width:34ch;color:#a9cdb4}
+.fcol h4{color:#fff;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;font-weight:700}
+.fcol a{display:block;font-weight:300;font-size:15px;margin-bottom:11px;color:#bcdcc5;transition:.2s}
+.fcol a:hover{color:#fff}
+.social{display:flex;gap:12px;margin-top:18px}
+.social a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:.25s var(--ease)}
+.social a:hover{background:var(--yellow);color:var(--deep);transform:translateY(-3px)}
+.social svg{width:18px;height:18px}
+.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border-top:1px solid rgba(255,255,255,.1);margin-top:48px;padding-top:24px;font-size:13px;font-weight:300;color:#8fb39b}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:.7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:960px){
+  .hero .grid,.story .grid,.cta-card,.fgrid{grid-template-columns:1fr}
+  .hero-art{max-width:420px;margin:0 auto;order:-1}
+  .bowls{grid-template-columns:repeat(2,1fr)}
+  .process .steps,.values .v{grid-template-columns:1fr}
+  .fgrid{gap:30px}
+  .cta-card{padding:44px 30px}
+}
+@media(max-width:680px){
+  .nav{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--cream);flex-direction:column;
+    align-items:flex-start;justify-content:flex-start;padding:96px 30px 30px;gap:22px;transform:translateX(100%);transition:.32s var(--ease);box-shadow:-20px 0 60px -30px rgba(0,0,0,.35)}
+  body.nav-open .nav{transform:none}
+  body.nav-open{overflow:hidden}
+  .menu-toggle{display:flex;z-index:70}
+  .nav .btn{width:100%;justify-content:center}
+  .bowls{grid-template-columns:1fr}
+  .band{padding:68px 0}
+  .hero{padding:128px 0 70px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="bar">
+    <a href="#top" class="brand" aria-label="Narges Nourish home">
+      <span class="logo" aria-hidden="true"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path id="nv" d="M100,82 C81,64 83,28 100,10 C117,28 119,64 100,82 Z" fill="#F7B733"/><g><use href="#nv" transform="rotate(0 100 82)"/><use href="#nv" transform="rotate(60 100 82)"/><use href="#nv" transform="rotate(120 100 82)"/><use href="#nv" transform="rotate(180 100 82)"/><use href="#nv" transform="rotate(240 100 82)"/><use href="#nv" transform="rotate(300 100 82)"/></g><circle cx="100" cy="82" r="19" fill="#EF8E2C"/><circle cx="100" cy="82" r="19" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="100" cy="82" r="9.5" fill="#FFD66B"/><path d="M34,128 Q100,150 166,128 L166,130 Q160,180 100,184 Q40,180 34,130 Z" fill="#4CA55A"/><path d="M34,128 Q100,150 166,128 Q100,142 34,128 Z" fill="#2E7D44"/></svg></span>
+      <span><b>Narges</b> <span>Nourish</span></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a class="link" href="#menu">Menu</a>
+      <a class="link" href="#story">Our story</a>
+      <a class="link" href="#how">How it works</a>
+      <a class="link" href="#order">Contact</a>
+      <a class="btn btn-amber" href="#order">Order now</a>
+    </nav>
+    <button class="menu-toggle" id="toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<a id="top"></a>
+<!-- HERO -->
+<section class="hero">
+  <span class="blob b1"></span><span class="blob b2"></span>
+  <div class="wrap grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Wholesome bowls · delivered in Doha</span>
+      <h1>Nourish <span class="accent">naturally,</span> every day.</h1>
+      <p class="lead">Daffodil-fresh, chef-built bowls made from real ingredients — delivered to your door, ready to make you feel good.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#order">Order now <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#menu">See the menu</a>
+      </div>
+      <div class="trust">
+        <div><b>100%</b> real ingredients</div>
+        <div><b>Daily</b> made fresh</div>
+        <div><b>0</b> refined sugar</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <span class="ring"></span><span class="disc"></span>
+      <span class="petal-dot pd1"></span><span class="petal-dot pd2"></span><span class="petal-dot pd3"></span>
+      <div class="swayer" style="width:62%;display:flex;justify-content:center">
+        <svg class="bowlmark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path id="hp" d="M100,82 C81,64 83,28 100,10 C117,28 119,64 100,82 Z" fill="#F7B733"/><g><use href="#hp" transform="rotate(0 100 82)"/><use href="#hp" transform="rotate(60 100 82)"/><use href="#hp" transform="rotate(120 100 82)"/><use href="#hp" transform="rotate(180 100 82)"/><use href="#hp" transform="rotate(240 100 82)"/><use href="#hp" transform="rotate(300 100 82)"/></g><circle cx="100" cy="82" r="19" fill="#EF8E2C"/><circle cx="100" cy="82" r="19" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="100" cy="82" r="9.5" fill="#FFD66B"/><path d="M34,128 Q100,150 166,128 L166,130 Q160,180 100,184 Q40,180 34,130 Z" fill="#4CA55A"/><path d="M34,128 Q100,150 166,128 Q100,142 34,128 Z" fill="#2E7D44"/><path d="M52,150 Q56,168 78,176" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" opacity=".5"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Fresh</span><span class="dot">✿</span><span>Natural</span><span class="dot">✿</span><span>Delivered daily</span><span class="dot">✿</span><span>No refined sugar</span><span class="dot">✿</span><span>Locally sourced</span><span class="dot">✿</span><span>Plant-forward</span><span class="dot">✿</span>
+    <span>Fresh</span><span class="dot">✿</span><span>Natural</span><span class="dot">✿</span><span>Delivered daily</span><span class="dot">✿</span><span>No refined sugar</span><span class="dot">✿</span><span>Locally sourced</span><span class="dot">✿</span><span>Plant-forward</span><span class="dot">✿</span>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="band story" id="story">
+  <div class="wrap grid">
+    <div class="art reveal">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path id="sp" d="M100,82 C81,64 83,28 100,10 C117,28 119,64 100,82 Z" fill="#F7B733"/><g><use href="#sp" transform="rotate(0 100 82)"/><use href="#sp" transform="rotate(60 100 82)"/><use href="#sp" transform="rotate(120 100 82)"/><use href="#sp" transform="rotate(180 100 82)"/><use href="#sp" transform="rotate(240 100 82)"/><use href="#sp" transform="rotate(300 100 82)"/></g><circle cx="100" cy="82" r="19" fill="#EF8E2C"/><circle cx="100" cy="82" r="19" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="100" cy="82" r="9.5" fill="#FFD66B"/><path d="M34,128 Q100,150 166,128 L166,130 Q160,180 100,184 Q40,180 34,130 Z" fill="#4CA55A"/><path d="M34,128 Q100,150 166,128 Q100,142 34,128 Z" fill="#2E7D44"/></svg>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Our story</span>
+      <h2>Narges means daffodil — the first bloom of spring.</h2>
+      <p>We named the kitchen after that first flower because it stands for fresh starts and natural goodness. Our mark turns the bloom into a bowl: a flower you can eat, a meal that helps you grow.</p>
+      <p><span class="pull">Every bowl is built the same way</span> — real, whole ingredients, prepared the morning it's delivered, with nothing artificial hiding in the recipe.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="band menu" id="menu">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">The menu</span>
+      <h2>Bowls built to nourish</h2>
+      <p>A rotating selection of seasonal bowls — pick your favourites, we handle the rest.</p>
+    </div>
+    <div class="bowls">
+      <article class="bowl reveal">
+        <div class="ic" style="background:#EAF4EC">🥬</div>
+        <h3>Green Goddess</h3>
+        <p>Kale, avocado, edamame, cucumber and herbed tahini over greens.</p>
+        <div class="price">QR 42 <small>/ bowl</small></div>
+      </article>
+      <article class="bowl reveal">
+        <div class="ic" style="background:#FBEFD2">🌾</div>
+        <h3>Golden Grain</h3>
+        <p>Turmeric quinoa, roasted veg, chickpeas and a bright lemon dressing.</p>
+        <div class="price">QR 45 <small>/ bowl</small></div>
+      </article>
+      <article class="bowl reveal">
+        <div class="ic" style="background:#FCE3D6">🍓</div>
+        <h3>Sunrise Smoothie</h3>
+        <p>Mango, banana and berries topped with granola, seeds and coconut.</p>
+        <div class="price">QR 38 <small>/ bowl</small></div>
+      </article>
+      <article class="bowl reveal">
+        <div class="ic" style="background:#E7F0E8">🍂</div>
+        <h3>Seasonal Harvest</h3>
+        <p>A chef's bowl that changes with the market — ask what's fresh today.</p>
+        <div class="price">QR 48 <small>/ bowl</small></div>
+      </article>
+    </div>
+    <p style="text-align:center;margin-top:34px;font-size:13px;color:var(--muted)">Sample menu &amp; pricing — update with your live offers.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="band process" id="how">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Three steps to a better lunch</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="tick"><svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3zM6 7v13a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7M9 11h6"/></svg></div>
+        <div class="n">STEP 01</div><h3>Choose your bowls</h3>
+        <p>Browse the menu and build your order in a couple of taps.</p>
+      </div>
+      <div class="step reveal">
+        <div class="tick"><svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18h14M7 18l1-9h8l1 9M9 9V7a3 3 0 0 1 6 0v2"/></svg></div>
+        <div class="n">STEP 02</div><h3>We cook &amp; deliver</h3>
+        <p>Made fresh that morning and brought straight to your door.</p>
+      </div>
+      <div class="step reveal">
+        <div class="tick"><svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <div class="n">STEP 03</div><h3>Eat well, feel better</h3>
+        <p>Open, enjoy, and get on with your day feeling good.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <span class="silo" aria-hidden="true"><svg viewBox="0 0 200 200"><path id="vp" d="M100,100 C81,82 83,46 100,28 C117,46 119,82 100,100 Z" fill="#6FBF73"/><g><use href="#vp" transform="rotate(0 100 100)"/><use href="#vp" transform="rotate(60 100 100)"/><use href="#vp" transform="rotate(120 100 100)"/><use href="#vp" transform="rotate(180 100 100)"/><use href="#vp" transform="rotate(240 100 100)"/><use href="#vp" transform="rotate(300 100 100)"/></g><circle cx="100" cy="100" r="20" fill="#6FBF73"/></svg></span>
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--sprout)">Why Narges Nourish</span>
+    <h2 style="font-size:clamp(28px,4vw,42px);margin-top:12px">Good food shouldn't be complicated</h2>
+    <div class="v">
+      <div class="vcard reveal"><div class="vm">🌱</div><h3>Fresh</h3><p>Prepared the morning it reaches you — never frozen, never sitting on a shelf.</p></div>
+      <div class="vcard reveal"><div class="vm">🤍</div><h3>Honest</h3><p>Real, recognisable ingredients. No additives, no fine-print, no diet guilt.</p></div>
+      <div class="vcard reveal"><div class="vm">🚲</div><h3>Delivered</h3><p>Door-to-door across Doha, on a schedule that fits your week.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="order">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <span class="silo" aria-hidden="true"><svg viewBox="0 0 200 200"><path id="cp" d="M100,100 C81,82 83,46 100,28 C117,46 119,82 100,100 Z" fill="#fff"/><g><use href="#cp" transform="rotate(0 100 100)"/><use href="#cp" transform="rotate(60 100 100)"/><use href="#cp" transform="rotate(120 100 100)"/><use href="#cp" transform="rotate(180 100 100)"/><use href="#cp" transform="rotate(240 100 100)"/><use href="#cp" transform="rotate(300 100 100)"/></g><circle cx="100" cy="100" r="20" fill="#fff"/></svg></span>
+      <div>
+        <span class="eyebrow" style="color:var(--soft)">Ready when you are</span>
+        <h2>Start eating well this week</h2>
+        <p>Order directly, or drop your email for the menu and launch offers.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
+          <a class="btn btn-amber" href="https://wa.me/97400000000" target="_blank" rel="noopener">Order on WhatsApp</a>
+          <a class="btn btn-light" href="mailto:hello@nargesnourish.com">Email us</a>
+        </div>
+      </div>
+      <div>
+        <form class="signup" action="https://formspree.io/f/your-form-id" method="POST">
+          <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+          <button class="btn btn-primary" type="submit" style="background:var(--deep)">Get the menu</button>
+        </form>
+        <p class="muted-note">No spam — just fresh updates. Replace the form &amp; WhatsApp number with your own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a href="#top" class="brand"><span class="logo" style="width:36px;height:36px"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path id="fp" d="M100,100 C81,82 83,46 100,28 C117,46 119,82 100,100 Z" fill="#F7B733"/><g><use href="#fp" transform="rotate(0 100 100)"/><use href="#fp" transform="rotate(60 100 100)"/><use href="#fp" transform="rotate(120 100 100)"/><use href="#fp" transform="rotate(180 100 100)"/><use href="#fp" transform="rotate(240 100 100)"/><use href="#fp" transform="rotate(300 100 100)"/></g><circle cx="100" cy="100" r="19" fill="#EF8E2C"/><circle cx="100" cy="100" r="19" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="100" cy="100" r="9.5" fill="#FFD66B"/></svg></span><span><b>Narges</b> <span>Nourish</span></span></a>
+        <p>Wholesome bowls, daffodil-fresh and delivered daily across Doha. Nourish naturally.</p>
+        <div class="social">
+          <a href="https://instagram.com/nargesnourish" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.9.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.46 2.21 8.84 2.2 12 2.2Zm0 1.8c-3.14 0-3.5 0-4.74.07-.9.04-1.38.19-1.7.31-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.12.32-.27.8-.31 1.7C3.43 8.95 3.42 9.32 3.42 12s0 3.05.07 4.27c.04.9.19 1.38.31 1.7.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.12.8.27 1.7.31 1.24.07 1.6.07 4.74.07s3.5 0 4.74-.07c.9-.04 1.38-.19 1.7-.31.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.12-.32.27-.8.31-1.7.07-1.22.07-1.59.07-4.27s0-3.05-.07-4.27c-.04-.9-.19-1.38-.31-1.7a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.32-.12-.8-.27-1.7-.31C15.5 4 15.14 4 12 4Zm0 3.05A4.95 4.95 0 1 1 12 17a4.95 4.95 0 0 1 0-9.9Zm0 1.8a3.15 3.15 0 1 0 0 6.3 3.15 3.15 0 0 0 0-6.3Zm5.15-2.99a1.16 1.16 0 1 1 0 2.31 1.16 1.16 0 0 1 0-2.31Z"/></svg></a>
+          <a href="https://facebook.com/nargesnourish" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.9V13h2.36v8h3.24Z"/></svg></a>
+          <a href="https://x.com/nargesnourish" aria-label="X" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.5L21.7 21h-5.9l-4.6-6-5.3 6H2.9l7-8L2.6 3h6l4.1 5.5L17.5 3Zm-1 16h1.6L7.6 4.7H5.9L16.5 19Z"/></svg></a>
+          <a href="https://linkedin.com/company/nargesnourish" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3.4 9h3.2v11.5H3.4V9Zm5.1 0h3.06v1.57h.04c.43-.8 1.47-1.65 3.03-1.65 3.24 0 3.84 2.13 3.84 4.9v6.68h-3.2v-5.92c0-1.41-.03-3.23-1.97-3.23-1.97 0-2.27 1.54-2.27 3.13v6.02H8.5V9Z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h4>Explore</h4>
+        <a href="#menu">Menu</a><a href="#story">Our story</a><a href="#how">How it works</a><a href="#order">Order</a>
+      </div>
+      <div class="fcol">
+        <h4>Contact</h4>
+        <a href="mailto:hello@nargesnourish.com">hello@nargesnourish.com</a>
+        <a href="https://wa.me/97400000000" target="_blank" rel="noopener">WhatsApp us</a>
+        <a href="#">Doha, Qatar</a>
+      </div>
+      <div class="fcol">
+        <h4>Hours</h4>
+        <a href="#">Sun–Thu · 8am–8pm</a><a href="#">Fri–Sat · 9am–6pm</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© <span id="yr">2026</span> Narges Nourish. All rights reserved.</span>
+      <span>Nourish naturally · Made fresh in Doha</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // header shadow on scroll
+  const hdr=document.getElementById('hdr');
+  const onScroll=()=>hdr.classList.toggle('scrolled',window.scrollY>12);
+  onScroll(); addEventListener('scroll',onScroll,{passive:true});
+  // mobile nav
+  const t=document.getElementById('toggle');
+  t.addEventListener('click',()=>{
+    const open=document.body.classList.toggle('nav-open');
+    t.setAttribute('aria-expanded',open);
+  });
+  document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{
+    document.body.classList.remove('nav-open');t.setAttribute('aria-expanded',false);
+  }));
+  // scroll reveal
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
