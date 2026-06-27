@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Narges Nourish — Nourish naturally, every day</title>
-<meta name="description" content="Wholesome bowls, daffodil-fresh and chef-built, delivered daily across Doha. Eat well, feel better with Narges Nourish.">
+<meta name="description" content="Monthly subscription bowls — Keto, Vegan, High-Protein, Balanced. Daffodil-fresh and delivered daily across Doha. Eat well, feel better.">
 <meta name="theme-color" content="#16302A">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Narges Nourish — Nourish naturally, every day">
-<meta property="og:description" content="Wholesome bowls, daffodil-fresh and chef-built, delivered daily across Doha.">
+<meta property="og:description" content="Monthly subscription bowls — Keto, Vegan, High-Protein, Balanced. Daffodil-fresh and delivered daily across Doha.">
 <meta property="og:url" content="https://nargesnourish.com/">
 <meta property="og:image" content="https://nargesnourish.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -118,17 +118,21 @@ header.scrolled{background:rgba(250,247,239,.86);backdrop-filter:blur(12px);box-
 .story p{font-size:17px;font-weight:300;margin-top:18px;max-width:52ch}
 .story .pull{font-weight:600;color:var(--ink)}
 
-/* menu / bowls */
+/* menu / subscriptions */
 .menu{background:linear-gradient(180deg,var(--cream),#F2ECDD)}
-.bowls{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.bowl{background:var(--paper);border:1px solid var(--line);border-radius:26px 26px 90px 90px/26px 26px 60px 60px;
+.subs{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.sub{background:var(--paper);border:1px solid var(--line);border-radius:26px;
   padding:30px 26px 34px;transition:.3s var(--ease);position:relative;overflow:hidden}
-.bowl:hover{transform:translateY(-8px);box-shadow:0 30px 60px -40px rgba(46,125,68,.55);border-color:var(--sprout)}
-.bowl .ic{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
-.bowl h3{font-size:20px;margin-bottom:8px}
-.bowl p{font-size:14.5px;font-weight:300;color:var(--text);min-height:66px}
-.bowl .price{margin-top:14px;font-weight:700;color:var(--ink);font-size:17px}
-.bowl .price small{font-weight:500;color:var(--muted);font-size:12px}
+.sub:hover{transform:translateY(-8px);box-shadow:0 30px 60px -40px rgba(46,125,68,.55);border-color:var(--sprout)}
+.sub .ic{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:18px}
+.sub h3{font-size:20px;margin-bottom:8px}
+.sub .cat{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.sub p{font-size:14.5px;font-weight:300;color:var(--text);min-height:66px}
+.sub .price{margin-top:14px;font-weight:700;color:var(--ink);font-size:19px}
+.sub .price small{font-weight:500;color:var(--muted);font-size:12px;display:block;margin-top:4px}
+.sub .cta{margin-top:18px}
+.sub .cta a{display:inline-block;font-size:13px;font-weight:600;color:var(--ink);padding:8px 14px;border:1px solid var(--line);border-radius:24px;transition:.2s}
+.sub .cta a:hover{background:var(--ink);color:#fff}
 
 /* process */
 .process .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;counter-reset:step}
@@ -143,7 +147,7 @@ header.scrolled{background:rgba(250,247,239,.86);backdrop-filter:blur(12px);box-
 .values h2{color:#fff}
 .values .v{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:14px}
 .values .vcard{padding:6px 0}
-.values .vcard .vm{width:54px;height:54px;border-radius:16px;background:rgba(111,191,115,.18);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.values .vcard .vm{width:54px;height:54px;border-radius:16px;background:rgba(111,191,115,.18);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:24px}
 .values .vcard h3{color:#fff;font-size:22px;margin-bottom:8px}
 .values .vcard p{font-weight:300;color:#cfe6d6;font-size:15px}
 .values .silo{position:absolute;right:-60px;top:-40px;width:280px;opacity:.06}
@@ -182,7 +186,7 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
 @media(max-width:960px){
   .hero .grid,.story .grid,.cta-card,.fgrid{grid-template-columns:1fr}
   .hero-art{max-width:420px;margin:0 auto;order:-1}
-  .bowls{grid-template-columns:repeat(2,1fr)}
+  .subs{grid-template-columns:repeat(2,1fr)}
   .process .steps,.values .v{grid-template-columns:1fr}
   .fgrid{gap:30px}
   .cta-card{padding:44px 30px}
@@ -194,7 +198,7 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
   body.nav-open{overflow:hidden}
   .menu-toggle{display:flex;z-index:70}
   .nav .btn{width:100%;justify-content:center}
-  .bowls{grid-template-columns:1fr}
+  .subs{grid-template-columns:1fr}
   .band{padding:68px 0}
   .hero{padding:128px 0 70px}
 }
@@ -213,11 +217,11 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
       <span><b>Narges</b> <span>Nourish</span></span>
     </a>
     <nav class="nav" id="nav">
-      <a class="link" href="#menu">Menu</a>
+      <a class="link" href="#menu">Plans</a>
       <a class="link" href="#story">Our story</a>
       <a class="link" href="#how">How it works</a>
       <a class="link" href="#order">Contact</a>
-      <a class="btn btn-amber" href="#order">Order now</a>
+      <a class="btn btn-amber" href="#order">Subscribe now</a>
     </nav>
     <button class="menu-toggle" id="toggle" aria-label="Open menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -233,15 +237,15 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
     <div class="hero-copy">
       <span class="eyebrow">Wholesome bowls · delivered in Doha</span>
       <h1>Nourish <span class="accent">naturally,</span> every day.</h1>
-      <p class="lead">Daffodil-fresh, chef-built bowls made from real ingredients — delivered to your door, ready to make you feel good.</p>
+      <p class="lead">Monthly subscription bowls with fresh recipes that rotate weekly. Choose your plan, we handle the nutrition — delivered to your door.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="#order">Order now <span aria-hidden="true">→</span></a>
-        <a class="btn btn-ghost" href="#menu">See the menu</a>
+        <a class="btn btn-primary" href="#order">Subscribe now <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#menu">See plans</a>
       </div>
       <div class="trust">
         <div><b>100%</b> real ingredients</div>
-        <div><b>Daily</b> made fresh</div>
-        <div><b>0</b> refined sugar</div>
+        <div><b>Weekly</b> new recipes</div>
+        <div><b>Fresh</b> every day</div>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -257,8 +261,8 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
 <!-- MARQUEE -->
 <div class="marquee" aria-hidden="true">
   <div class="track">
-    <span>Fresh</span><span class="dot">✿</span><span>Natural</span><span class="dot">✿</span><span>Delivered daily</span><span class="dot">✿</span><span>No refined sugar</span><span class="dot">✿</span><span>Locally sourced</span><span class="dot">✿</span><span>Plant-forward</span><span class="dot">✿</span>
-    <span>Fresh</span><span class="dot">✿</span><span>Natural</span><span class="dot">✿</span><span>Delivered daily</span><span class="dot">✿</span><span>No refined sugar</span><span class="dot">✿</span><span>Locally sourced</span><span class="dot">✿</span><span>Plant-forward</span><span class="dot">✿</span>
+    <span>Fresh</span><span class="dot">✿</span><span>Weekly recipes</span><span class="dot">✿</span><span>Delivered daily</span><span class="dot">✿</span><span>Real ingredients</span><span class="dot">✿</span><span>No refined sugar</span><span class="dot">✿</span><span>Goal-focused</span><span class="dot">✿</span>
+    <span>Fresh</span><span class="dot">✿</span><span>Weekly recipes</span><span class="dot">✿</span><span>Delivered daily</span><span class="dot">✿</span><span>Real ingredients</span><span class="dot">✿</span><span>No refined sugar</span><span class="dot">✿</span><span>Goal-focused</span><span class="dot">✿</span>
   </div>
 </div>
 
@@ -272,46 +276,54 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
       <span class="eyebrow">Our story</span>
       <h2>Narges means daffodil — the first bloom of spring.</h2>
       <p>We named the kitchen after that first flower because it stands for fresh starts and natural goodness. Our mark turns the bloom into a bowl: a flower you can eat, a meal that helps you grow.</p>
-      <p><span class="pull">Every bowl is built the same way</span> — real, whole ingredients, prepared the morning it's delivered, with nothing artificial hiding in the recipe.</p>
+      <p><span class="pull">Every subscription is built the same way</span> — real, whole ingredients, prepared fresh each morning, rotated weekly so you never get bored, with nothing artificial hiding in the recipe.</p>
     </div>
   </div>
 </section>
 
-<!-- MENU -->
+<!-- SUBSCRIPTIONS -->
 <section class="band menu" id="menu">
   <div class="wrap">
     <div class="head reveal">
-      <span class="eyebrow">The menu</span>
-      <h2>Bowls built to nourish</h2>
-      <p>A rotating selection of seasonal bowls — pick your favourites, we handle the rest.</p>
+      <span class="eyebrow">Monthly plans</span>
+      <h2>Choose your bowl lifestyle</h2>
+      <p>Four subscription plans with fresh, rotating recipes delivered weekly. Pick what aligns with your goals.</p>
     </div>
-    <div class="bowls">
-      <article class="bowl reveal">
-        <div class="ic" style="background:#EAF4EC">🥬</div>
-        <h3>Green Goddess</h3>
-        <p>Kale, avocado, edamame, cucumber and herbed tahini over greens.</p>
-        <div class="price">QR 42 <small>/ bowl</small></div>
+    <div class="subs">
+      <article class="sub reveal">
+        <div class="ic">🥗</div>
+        <div class="cat">Balanced & Wellness</div>
+        <h3>All-Round Health</h3>
+        <p>Diverse, nutrient-dense bowls that hit all the nutrition groups. Mediterranean, Asian, Moroccan, Rainbow.</p>
+        <div class="price">1800 QAR <small>/ month · ~90/bowl</small></div>
+        <div class="cta"><a href="https://wa.me/974XXXXXXXX?text=Hi!%20I%20want%20to%20subscribe%20to%20Balanced%20%26%20Wellness%20plan">Choose plan →</a></div>
       </article>
-      <article class="bowl reveal">
-        <div class="ic" style="background:#FBEFD2">🌾</div>
-        <h3>Golden Grain</h3>
-        <p>Turmeric quinoa, roasted veg, chickpeas and a bright lemon dressing.</p>
-        <div class="price">QR 45 <small>/ bowl</small></div>
+      <article class="sub reveal">
+        <div class="ic">🌱</div>
+        <div class="cat">Plant-Based & Vegan</div>
+        <h3>Eat Plant-Powered</h3>
+        <p>100% plant-based bowls with complete proteins, whole grains, and seasonal produce. Ethical, nourishing.</p>
+        <div class="price">1800 QAR <small>/ month · ~90/bowl</small></div>
+        <div class="cta"><a href="https://wa.me/974XXXXXXXX?text=Hi!%20I%20want%20to%20subscribe%20to%20Plant-Based%20%26%20Vegan%20plan">Choose plan →</a></div>
       </article>
-      <article class="bowl reveal">
-        <div class="ic" style="background:#FCE3D6">🍓</div>
-        <h3>Sunrise Smoothie</h3>
-        <p>Mango, banana and berries topped with granola, seeds and coconut.</p>
-        <div class="price">QR 38 <small>/ bowl</small></div>
+      <article class="sub reveal">
+        <div class="ic">⚡</div>
+        <div class="cat">Keto & Low-Carb</div>
+        <h3>Low-Carb Focus</h3>
+        <p>Sub-20g net carb bowls with quality fats and protein. Cauliflower, zucchini noodles, avocado, grass-fed.</p>
+        <div class="price">2000 QAR <small>/ month · ~100/bowl</small></div>
+        <div class="cta"><a href="https://wa.me/974XXXXXXXX?text=Hi!%20I%20want%20to%20subscribe%20to%20Keto%20%26%20Low-Carb%20plan">Choose plan →</a></div>
       </article>
-      <article class="bowl reveal">
-        <div class="ic" style="background:#E7F0E8">🍂</div>
-        <h3>Seasonal Harvest</h3>
-        <p>A chef's bowl that changes with the market — ask what's fresh today.</p>
-        <div class="price">QR 48 <small>/ bowl</small></div>
+      <article class="sub reveal">
+        <div class="ic">💪</div>
+        <div class="cat">High-Protein & Muscle</div>
+        <h3>Power & Recovery</h3>
+        <p>35–45g protein bowls with organic chicken, wild salmon, grass-fed beef, and recovery carbs.</p>
+        <div class="price">2100 QAR <small>/ month · ~105/bowl</small></div>
+        <div class="cta"><a href="https://wa.me/974XXXXXXXX?text=Hi!%20I%20want%20to%20subscribe%20to%20High-Protein%20%26%20Muscle%20plan">Choose plan →</a></div>
       </article>
     </div>
-    <p style="text-align:center;margin-top:34px;font-size:13px;color:var(--muted)">Sample menu &amp; pricing — update with your live offers.</p>
+    <p style="text-align:center;margin-top:34px;font-size:13px;color:var(--muted)">20 bowls per month (4/week × 5 weeks) · New recipes rotate weekly · Message us to customize</p>
   </div>
 </section>
 
@@ -320,23 +332,23 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
   <div class="wrap">
     <div class="head reveal">
       <span class="eyebrow">How it works</span>
-      <h2>Three steps to a better lunch</h2>
+      <h2>Three steps to a better month</h2>
     </div>
     <div class="steps">
       <div class="step reveal">
         <div class="tick"><svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3zM6 7v13a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7M9 11h6"/></svg></div>
-        <div class="n">STEP 01</div><h3>Choose your bowls</h3>
-        <p>Browse the menu and build your order in a couple of taps.</p>
+        <div class="n">STEP 01</div><h3>Pick your plan</h3>
+        <p>Choose the subscription that fits your goals — Balanced, Vegan, Keto, or High-Protein. Message us to start.</p>
       </div>
       <div class="step reveal">
         <div class="tick"><svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18h14M7 18l1-9h8l1 9M9 9V7a3 3 0 0 1 6 0v2"/></svg></div>
-        <div class="n">STEP 02</div><h3>We cook &amp; deliver</h3>
-        <p>Made fresh that morning and brought straight to your door.</p>
+        <div class="n">STEP 02</div><h3>Fresh delivery daily</h3>
+        <p>We rotate recipes weekly. Made fresh each morning and delivered on your schedule across Doha.</p>
       </div>
       <div class="step reveal">
         <div class="tick"><svg viewBox="0 0 24 24" width="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-        <div class="n">STEP 03</div><h3>Eat well, feel better</h3>
-        <p>Open, enjoy, and get on with your day feeling good.</p>
+        <div class="n">STEP 03</div><h3>Eat, nourish, thrive</h3>
+        <p>Open, enjoy, and feel the difference. Nutrition that aligns with your body and your goals.</p>
       </div>
     </div>
   </div>
@@ -349,9 +361,9 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
     <span class="eyebrow" style="color:var(--sprout)">Why Narges Nourish</span>
     <h2 style="font-size:clamp(28px,4vw,42px);margin-top:12px">Good food shouldn't be complicated</h2>
     <div class="v">
-      <div class="vcard reveal"><div class="vm">🌱</div><h3>Fresh</h3><p>Prepared the morning it reaches you — never frozen, never sitting on a shelf.</p></div>
+      <div class="vcard reveal"><div class="vm">🌱</div><h3>Fresh daily</h3><p>Prepared the morning it reaches you — never frozen, never sitting on a shelf.</p></div>
       <div class="vcard reveal"><div class="vm">🤍</div><h3>Honest</h3><p>Real, recognisable ingredients. No additives, no fine-print, no diet guilt.</p></div>
-      <div class="vcard reveal"><div class="vm">🚲</div><h3>Delivered</h3><p>Door-to-door across Doha, on a schedule that fits your week.</p></div>
+      <div class="vcard reveal"><div class="vm">🚲</div><h3>Delivered</h3><p>Door-to-door across Doha on a schedule that fits your week.</p></div>
     </div>
   </div>
 </section>
@@ -362,20 +374,20 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
     <div class="cta-card reveal">
       <span class="silo" aria-hidden="true"><svg viewBox="0 0 200 200"><path id="cp" d="M100,100 C81,82 83,46 100,28 C117,46 119,82 100,100 Z" fill="#fff"/><g><use href="#cp" transform="rotate(0 100 100)"/><use href="#cp" transform="rotate(60 100 100)"/><use href="#cp" transform="rotate(120 100 100)"/><use href="#cp" transform="rotate(180 100 100)"/><use href="#cp" transform="rotate(240 100 100)"/><use href="#cp" transform="rotate(300 100 100)"/></g><circle cx="100" cy="100" r="20" fill="#fff"/></svg></span>
       <div>
-        <span class="eyebrow" style="color:var(--soft)">Ready when you are</span>
-        <h2>Start eating well this week</h2>
-        <p>Order directly, or drop your email for the menu and launch offers.</p>
+        <span class="eyebrow" style="color:var(--soft)">Ready to start</span>
+        <h2>Begin your nourishment journey</h2>
+        <p>Message us on WhatsApp to pick your plan, choose your delivery schedule, and start eating well this week.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
-          <a class="btn btn-amber" href="https://wa.me/97431476454" target="_blank" rel="noopener">Order on WhatsApp</a>
+          <a class="btn btn-amber" href="https://wa.me/974XXXXXXXX?text=Hi%20Narges%20Nourish!%20I%20want%20to%20subscribe%20to%20one%20of%20your%20plans%20%F0%9F%8C%BC">Order on WhatsApp</a>
           <a class="btn btn-light" href="mailto:hello@nargesnourish.com">Email us</a>
         </div>
       </div>
       <div>
-        <form class="signup" action="https://formspree.io/f/xeebedvv" method="POST">
+        <form class="signup" action="https://formspree.io/f/your-form-id" method="POST">
           <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
-          <button class="btn btn-primary" type="submit" style="background:var(--deep)">Get the menu</button>
+          <button class="btn btn-primary" type="submit" style="background:var(--deep)">Subscribe list</button>
         </form>
-        <p class="muted-note">No spam — just fresh updates. Replace the form &amp; WhatsApp number with your own.</p>
+        <p class="muted-note">Get the latest menu & offers. No spam 🌿 Update the form ID with your Formspree endpoint.</p>
       </div>
     </div>
   </div>
@@ -387,7 +399,7 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
     <div class="fgrid">
       <div class="fbrand">
         <a href="#top" class="brand"><span class="logo" style="width:36px;height:36px"><svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path id="fp" d="M100,100 C81,82 83,46 100,28 C117,46 119,82 100,100 Z" fill="#F7B733"/><g><use href="#fp" transform="rotate(0 100 100)"/><use href="#fp" transform="rotate(60 100 100)"/><use href="#fp" transform="rotate(120 100 100)"/><use href="#fp" transform="rotate(180 100 100)"/><use href="#fp" transform="rotate(240 100 100)"/><use href="#fp" transform="rotate(300 100 100)"/></g><circle cx="100" cy="100" r="19" fill="#EF8E2C"/><circle cx="100" cy="100" r="19" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="100" cy="100" r="9.5" fill="#FFD66B"/></svg></span><span><b>Narges</b> <span>Nourish</span></span></a>
-        <p>Wholesome bowls, daffodil-fresh and delivered daily across Doha. Nourish naturally.</p>
+        <p>Wholesome, rotating subscription bowls delivered fresh across Doha. Choose your plan. Nourish naturally.</p>
         <div class="social">
           <a href="https://instagram.com/nargesnourish" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.9.07s-3.6 0-4.86-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.46 2.21 8.84 2.2 12 2.2Zm0 1.8c-3.14 0-3.5 0-4.74.07-.9.04-1.38.19-1.7.31-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.12.32-.27.8-.31 1.7C3.43 8.95 3.42 9.32 3.42 12s0 3.05.07 4.27c.04.9.19 1.38.31 1.7.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.12.8.27 1.7.31 1.24.07 1.6.07 4.74.07s3.5 0 4.74-.07c.9-.04 1.38-.19 1.7-.31.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.12-.32.27-.8.31-1.7.07-1.22.07-1.59.07-4.27s0-3.05-.07-4.27c-.04-.9-.19-1.38-.31-1.7a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.32-.12-.8-.27-1.7-.31C15.5 4 15.14 4 12 4Zm0 3.05A4.95 4.95 0 1 1 12 17a4.95 4.95 0 0 1 0-9.9Zm0 1.8a3.15 3.15 0 1 0 0 6.3 3.15 3.15 0 0 0 0-6.3Zm5.15-2.99a1.16 1.16 0 1 1 0 2.31 1.16 1.16 0 0 1 0-2.31Z"/></svg></a>
           <a href="https://facebook.com/nargesnourish" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.29-.04-1.27-.12-2.41-.12-2.39 0-4.03 1.46-4.03 4.14v2.31H7.9V13h2.36v8h3.24Z"/></svg></a>
@@ -396,13 +408,13 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
         </div>
       </div>
       <div class="fcol">
-        <h4>Explore</h4>
-        <a href="#menu">Menu</a><a href="#story">Our story</a><a href="#how">How it works</a><a href="#order">Order</a>
+        <h4>Plans</h4>
+        <a href="#menu">Balanced & Wellness</a><a href="#menu">Plant-Based & Vegan</a><a href="#menu">Keto & Low-Carb</a><a href="#menu">High-Protein & Muscle</a>
       </div>
       <div class="fcol">
         <h4>Contact</h4>
         <a href="mailto:hello@nargesnourish.com">hello@nargesnourish.com</a>
-        <a href="https://wa.me/97431476554" target="_blank" rel="noopener">WhatsApp us</a>
+        <a href="https://wa.me/974XXXXXXXX" target="_blank" rel="noopener">WhatsApp us</a>
         <a href="#">Doha, Qatar</a>
       </div>
       <div class="fcol">
@@ -412,7 +424,7 @@ footer{background:var(--deep2);color:#cfe6d6;padding:70px 0 30px}
     </div>
     <div class="fbot">
       <span>© <span id="yr">2026</span> Narges Nourish. All rights reserved.</span>
-      <span>Nourish naturally · Made fresh in Doha</span>
+      <span>Nourish naturally · Fresh in Doha</span>
     </div>
   </div>
 </footer>
